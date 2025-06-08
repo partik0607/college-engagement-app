@@ -1,0 +1,43 @@
+.blogcard-card {
+  padding: 0.75rem;
+  display: block;
+  max-width: 100%;
+  background-color: rgba(105, 106, 31, 0.19);
+  box-sizing: border-box;
+}
+
+.blogcard-heading {
+  text-align:center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #000;
+}
+
+.blogcard-content {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.4rem;
+  overflow-y: auto;
+  text-align: center; /* fixed typo: 'centre' -> 'center' */
+  /* text-overflow: ellipsis; */
+  max-width: 36rem; /* roughly 3 lines */
+  max-height: 10rem; /* roughly 3 lines */
+}
+
+.blogcard-footer {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #555;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.blogcard-date {
+  font-style: italic;
+}
+
+.blogcard-author {
+  font-weight: 500;
+}
