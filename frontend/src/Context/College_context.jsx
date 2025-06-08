@@ -12,7 +12,7 @@ const CoustomcollegeContext = ({ children }) => {
   // ✅ Reusable fetchPosts function
   const fetchposts = async () => {
     try {
-      const response = await fetch('http://localhost:5005/api/v1/getposts', {
+      const response = await fetch('https://college-engagement-app-backend.onrender.com/api/v1/getposts', {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -29,7 +29,7 @@ const CoustomcollegeContext = ({ children }) => {
 
   const fetchUsers = async () => {
     try {
-      const response = await fetch('http://localhost:5005/api/v1/getusers', {
+      const response = await fetch('https://college-engagement-app-backend.onrender.com/api/v1/getusers', {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -46,7 +46,7 @@ const CoustomcollegeContext = ({ children }) => {
   const updateview=async (id)=>{
       try {
     console.log(id);
-    const response = await fetch(`http://localhost:5005/api/v1/updateview/${id}`, {
+    const response = await fetch(`https://college-engagement-app-backend.onrender.com/api/v1/updateview/${id}`, {
       method: 'PUT', // or 'PATCH' depending on your backend
       headers: {
         'Content-Type': 'application/json',
@@ -57,7 +57,7 @@ const CoustomcollegeContext = ({ children }) => {
     if (response.ok) {
       console.log(response);
       // Optional: fetch latest posts again
-      const updatedPosts = await fetch('http://localhost:5005/api/v1/getposts', {
+      const updatedPosts = await fetch('https://college-engagement-app-backend.onrender.com/api/v1/getposts', {
         headers: { 'Authorization': `Bearer ${token}` },
       });
       const newPosts = await updatedPosts.json();
@@ -73,7 +73,7 @@ const CoustomcollegeContext = ({ children }) => {
   }
    const deletepost = async (postid) => {
     try {
-      const response = await fetch(`http://localhost:5005/api/v1/delete/${postid}`, {
+      const response = await fetch(`https://college-engagement-app-backend.onrender.com/api/v1/delete/${postid}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -96,7 +96,7 @@ const CoustomcollegeContext = ({ children }) => {
  const editpost = async (postId, data) => {
   try {
     console.log(postId);
-    const response = await fetch(`http://localhost:5005/api/v1/update/${postId}`, {
+    const response = await fetch(`https://college-engagement-app-backend.onrender.com/api/v1/update/${postId}`, {
       method: 'PUT', // or 'PATCH' depending on your backend
       headers: {
         'Content-Type': 'application/json',
@@ -108,7 +108,7 @@ const CoustomcollegeContext = ({ children }) => {
     if (response.ok) {
       console.log(response);
       // Optional: fetch latest posts again
-      const updatedPosts = await fetch('http://localhost:5005/api/v1/getposts', {
+      const updatedPosts = await fetch('https://college-engagement-app-backend.onrender.com/api/v1/getposts', {
         headers: { 'Authorization': `Bearer ${token}` },
       });
       const newPosts = await updatedPosts.json();
@@ -124,7 +124,7 @@ const CoustomcollegeContext = ({ children }) => {
 
 const createpost=async (formdata)=>{
  try {
-        const response = await fetch('http://localhost:5005/api/v1/post', {
+        const response = await fetch('https://college-engagement-app-backend.onrender.com/api/v1/post', {
           method: 'POST',
           headers: {
             'Accept': 'application/json',

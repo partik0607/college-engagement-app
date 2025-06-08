@@ -12,7 +12,7 @@ const LoginSignup = () => {
 
     const login = async () => {
       try {
-        const response = await fetch('http://localhost:5005/api/v1/login', {
+        const response = await fetch('https://college-engagement-app-backend.onrender.com/api/v1/login', {
           method: 'POST',
           headers: {
             // 'Accept': 'application/json',
@@ -49,7 +49,7 @@ const LoginSignup = () => {
     
       try {
         console.log(formData);
-        const response = await fetch('http://localhost:5005/api/v1/register', {
+        const response = await fetch('https://college-engagement-app-backend.onrender.com/api/v1/register', {
           method: 'POST',
           headers: {
             'Accept': 'application/json',

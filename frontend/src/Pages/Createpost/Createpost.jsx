@@ -21,7 +21,7 @@ function Createpost() {
   const handlesubmit = async(e) => {
     e.preventDefault();
     // try {
-    //     const response = await fetch('http://localhost:5005/api/v1/post', {
+    //     const response = await fetch('https://college-engagement-app-backend.onrender.com/api/v1/post', {
     //       method: 'POST',
     //       headers: {
     //         'Accept': 'application/json',
